@@ -77,11 +77,11 @@
     </dependency>
 
     <!-- 他プロジェクト依存（※これは用途に応じて） -->
-    <dependency>
+    <!--<dependency>
       <groupId>com.example</groupId>
       <artifactId>sihuto_app_2</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-    </dependency>
+    </dependency>-->
 
     <!-- Google OAuth 認証 -->
 	<dependency>
