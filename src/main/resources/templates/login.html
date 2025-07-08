@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ログイン画面</title>
+	
+	<style>
+	        body {
+	            font-family: sans-serif;
+	            background-color: #f7f7f7;
+	            padding: 20px;
+	            text-align: center;
+	        }
+
+	        h1 {
+	            margin-bottom: 30px;
+	        }
+
+	        .button-group {
+	            display: flex;
+	            flex-direction: column;
+	            gap: 15px;
+	            max-width: 300px;
+	            margin: auto;
+	        }
+
+	        button {
+	            padding: 16px;
+	            font-size: 50px;
+	            border: none;
+	            border-radius: 8px;
+	            background-color: #4CAF50;
+	            color: white;
+	            cursor: pointer;
+	        }
+
+	        form {
+	            margin-bottom: 15px;
+	        }
+
+	        @media (min-width: 768px) {
+	            .button-group {
+	                flex-direction: row;
+	                flex-wrap: wrap;
+	                justify-content: center;
+	            }
+
+	            button {
+	                min-width: 150px;
+	                font-size: 20px;
+	                padding: 18px;
+	            }
+				
+				
+				
+	        }
+	    </style>
+	
+</head>
+<body>
+    <h1>ログイン画面</h1>
+	
+	<p th:if="${errorMessage}" th:text="${errorMessage}" style="color: red;"></p>
+
+	<form th:action="@{/dologin}" method="post">
+	    <!--<p th:if="${param.error}" style="color:red;" ></p>-->
+		
+		
+	    <p><input type="text" name="id" placeholder="ID" required /></p>
+	    <p><input type="password" name="password" placeholder="Password" required /></p>
+		
+	    <p><button class="login" type="submit" value="ログイン" />ログイン</button></p>
+	</form>
+</body>
+</html>

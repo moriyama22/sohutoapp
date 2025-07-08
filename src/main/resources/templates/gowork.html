@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>出勤入力画面</title>
+	
+	<style>
+	        body {
+	            font-family: sans-serif;
+	            background-color: #f7f7f7;
+	            padding: 20px;
+	            text-align: center;
+	        }
+
+	        h1 {
+	            margin-bottom: 30px;
+	        }
+
+	        .button-group {
+	            display: flex;
+	            flex-direction: column;
+	            gap: 15px;
+	            max-width: 300px;
+	            margin: auto;
+	        }
+
+	        button {
+	            padding: 16px;
+	            font-size: 18px;
+	            border: none;
+	            border-radius: 8px;
+	            background-color: #4CAF50;
+	            color: white;
+	            cursor: pointer;
+	        }
+
+	        form {
+	            margin-bottom: 15px;
+	        }
+
+	        @media (min-width: 768px) {
+	            .button-group {
+	                flex-direction: row;
+	                flex-wrap: wrap;
+	                justify-content: center;
+	            }
+
+	            button {
+	                min-width: 120px;
+	                font-size: 16px;
+	                padding: 12px;
+	            }
+	        }
+	    </style>
+	
+</head>
+<body>
+    <h1>出勤入力画面</h1>
+	
+	<p th:if="${error}" th:text="${error}" style="color: red;"></p>
+	<p th:if="${message}" th:text="${message}" style="color: brack;"></p>
+	
+    <form th:action="@{/goworksubmit}" method="post">
+        <label>日付:</label>
+        <input type="date" name="date" value="[[${today}]]" required><br>
+
+        <label>出勤時間:</label>
+        <input type="time" name="startTime"><br>
+
+
+        <button type="submit">登録</button>
+    </form>
+	
+	<!--メニュー画面に戻る-->
+	<form th:action="@{/menuback}" method="post">
+	        <button type="submit">戻る</button>
+	</form>
+	
+</body>
+</html>

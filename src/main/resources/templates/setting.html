@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>設定画面</title>
+    <meta charset="UTF-8">
+	
+	<style>
+	        body {
+	            font-family: sans-serif;
+	            background-color: #f7f7f7;
+	            padding: 20px;
+	            text-align: center;
+	        }
+
+	        h1 {
+	            margin-bottom: 30px;
+	        }
+
+	        .button-group {
+	            display: flex;
+	            flex-direction: column;
+	            gap: 15px;
+	            max-width: 300px;
+	            margin: auto;
+	        }
+
+	        button {
+	            padding: 16px;
+	            font-size: 18px;
+	            border: none;
+	            border-radius: 8px;
+	            background-color: #4CAF50;
+	            color: white;
+	            cursor: pointer;
+	        }
+
+			form {
+			   margin-bottom: 15px; /* ← 追加：ボタン間に余白 */
+			 }
+
+	        @media (min-width: 768px) {
+	            .button-group {
+	                flex-direction: row;
+	                flex-wrap: wrap;
+	                justify-content: center;
+	            }
+
+	            button {
+	                min-width: 120px;
+	                font-size: 16px;
+	                padding: 12px;
+	            }
+	        }
+	    </style>
+	
+</head>
+<body>
+    <h1>設定画面</h1>
+
+    <!-- メッセージ表示（登録完了など） -->
+    <p th:if="${message}" style="color: green;" th:text="${message}"></p>
+    <p th:if="${error}" style="color: red;" th:text="${error}"></p>
+
+    <!-- 登録フォーム -->
+    <form th:action="@{/settingsubmit}" method="post" th:object="${setting}">
+        <label>スプレッドシートURL:</label>
+        <input type="text" th:field="*{spreadsheetUrl}" /><br>
+
+        <label>シート名:</label>
+        <input type="text" th:field="*{sheetName}" /><br>
+
+        <label>初日セル:</label>
+        <input type="text" th:field="*{startDateCell}" /><br>
+
+        <label>出勤セル:</label>
+        <input type="text" th:field="*{startTimeCell}" /><br>
+
+        <label>退勤セル:</label>
+        <input type="text" th:field="*{endTimeCell}" /><br>
+
+        <button type="submit">登録</button>
+    </form>
+
+    <!-- メニューに戻る -->
+    <form th:action="@{/menuback}" method="post">
+        <button type="submit">戻る</button>
+    </form>
+</body>
+</html>
