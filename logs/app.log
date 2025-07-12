@@ -1,6 +1,0 @@
-2025-07-08T00:38:07.555+09:00  INFO 5484 --- [sihuto_app_5] [RMI TCP Connection(3515)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-07-08T00:38:07.821+09:00  INFO 5484 --- [sihuto_app_5] [RMI TCP Connection(3515)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-08T00:38:08.356+09:00  INFO 5484 --- [sihuto_app_5] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-08T00:38:08.470+09:00  INFO 5484 --- [sihuto_app_5] [RMI TCP Connection(3515)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-08T00:38:08.539+09:00  INFO 5484 --- [sihuto_app_5] [RMI TCP Connection(3515)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
-2025-07-08T00:38:08.581+09:00  INFO 5484 --- [sihuto_app_5] [RMI TCP Connection(3515)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
