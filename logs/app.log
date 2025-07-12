@@ -120,3 +120,35 @@ Caused by: java.net.SocketException: Connection reset
 2025-07-12T17:03:12.290+09:00  INFO 24288 --- [sihuto_app_5] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-07-12T17:03:12.556+09:00  INFO 24288 --- [sihuto_app_5] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
 2025-07-12T17:03:12.652+09:00  INFO 24288 --- [sihuto_app_5] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-12T17:03:17.462+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] com.example.demo.SihutoApp5Application   : Starting SihutoApp5Application using Java 17.0.10 with PID 24288 (C:\Users\USER\eclipse-workspace\sihuto_app_5\target\classes started by USER in C:\Users\USER\eclipse-workspace\sihuto_app_5)
+2025-07-12T17:03:17.463+09:00 DEBUG 24288 --- [sihuto_app_5] [restartedMain] com.example.demo.SihutoApp5Application   : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-12T17:03:17.463+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] com.example.demo.SihutoApp5Application   : No active profile set, falling back to 1 default profile: "default"
+2025-07-12T17:03:17.885+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-12T17:03:17.906+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2025-07-12T17:03:18.450+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-12T17:03:18.457+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-12T17:03:18.458+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12T17:03:18.653+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-07-12T17:03:18.654+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1189 ms
+2025-07-12T17:03:18.726+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-12T17:03:18.730+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-12T17:03:19.065+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-12T17:03:19.179+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-12T17:03:22.420+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@361a2a78
+2025-07-12T17:03:22.427+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-12T17:03:22.735+09:00  WARN 24288 --- [sihuto_app_5] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-12T17:03:23.540+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-12T17:03:23.644+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-12T17:03:23.645+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-12T17:03:23.694+09:00  WARN 24288 --- [sihuto_app_5] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-12T17:03:23.902+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-12T17:03:23.922+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-12T17:03:23.932+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] com.example.demo.SihutoApp5Application   : Started SihutoApp5Application in 6.538 seconds (process running for 16340.941)
+2025-07-12T17:03:23.935+09:00  INFO 24288 --- [sihuto_app_5] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
